@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sorting-algorithms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sorting-algorithms
+  template:
+    metadata:
+      labels:
+        app: sorting-algorithms
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: sorting-algorithms
+          image: usamaahmed99/sorting-algorithms:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
