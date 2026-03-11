@@ -9,7 +9,7 @@ namespace: sorting-algorithms-dev
 images:
 - name: usamaahmed99/sorting-algorithms
   newName: usamaahmed99/sorting-algorithms
-  newTag: 5-a013baa
+  newTag: 2-a013baa
 
 patches:
 - path: patch-service.yaml
